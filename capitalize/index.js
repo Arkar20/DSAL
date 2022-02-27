@@ -5,7 +5,19 @@
 //   capitalize("I'm a little tea pot") --> 'I'm A Little Tea Pot'
 //   capitalize('sHoRt AnD sToUt') --> 'Short And Stout'
 
-function capitalize(str) {}
+function capitalize(str) {
+  // const strArray = str.toLowerCase().split(" "); 
+
+  return str.toLowerCase().split(" ").map(word => {
+      // return word.split("")[0].toUpperCase()+word.slice(1);
+      return word.slice(0,1).toUpperCase()+word.slice(1); 
+    
+  }).join(" ");
+
+
+}
+
+// O(N) time complexity
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

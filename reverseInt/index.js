@@ -7,7 +7,15 @@
 //   reverseInt(-13) === -31
 //   reverseInt(-100) === -1
 
-function reverseInt(n) {}
+function reverseInt(n) {
+  if (n < 1) {
+      return parseInt(n.toString().split("").reverse().join("")) * -1;
+  }
+  return n.toString().split("").reverse().join("");
+}
+
+//time complexity O(log N)
+// if the n is increment by 10, we have to do only one more loop in reverse string operation
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

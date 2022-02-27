@@ -3,7 +3,33 @@
 // maxChar("I loveeeeeee noodles") === "e"
 // maxChar("1337") === "3"
 
-function maxChar(str) {}
+function maxChar(str) {
+  let pairs = {};
+  let maxChar = "";
+  let maxCountNum = 0;
+
+  for (let i = 0; i < str.length; i++){
+    const key = str[i];
+
+    if (pairs[key]) {
+        pairs[key]++; 
+    } else {
+      pairs[key] = 1;
+    } 
+
+
+    if (pairs[key] > maxCountNum) {
+      maxCountNum = pairs[key];
+      maxChar = str[i];
+    }
+    // maxChar = str[i];
+  }
+  return maxChar;
+}
+
+//O(N) complexity
+//o(1) space complexity
+
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

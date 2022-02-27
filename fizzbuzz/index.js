@@ -11,7 +11,29 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+
+  for (let i = 1; i <= n; i++){
+    let word = "";
+
+    if (i%3===0) {
+      word+="fizz"
+    }
+    if (i % 5===0) {
+      word += "buzz"
+    }
+
+    if (i%3!==0 && i%5!==0 ) {
+      word = i;
+    }
+    console.log(word)
+    
+
+  }
+
+}
+
+// O(N) time complexity 
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

@@ -5,7 +5,12 @@
 //   palindrome("Madam") === true
 //   palindrome("love") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+  return str.toLowerCase() === str.split("").reverse().join('').toLowerCase();
+}
+
+//time complexity o(n)
+//!we have to loop in revsere fun accordingto the str argument
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

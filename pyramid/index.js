@@ -13,7 +13,21 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+  for (let i = 1; i <= n; i++){
+    let level = "";
+    for (let padding =n-i; padding > 0; padding--){
+      level+=" "
+    }
+    for (let j = 2 * i - 1; j > 0; j++){
+      level+="#"
+    }
+      for (let padding = n-i; padding > 0; padding--){
+      level+=" "
+    }
+    console.log(level);
+  }
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

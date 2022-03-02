@@ -6,11 +6,43 @@
 // linearSearchIncludes(foods, "pizza") --> true
 // linearSearchFind(foods, food => food === "pizza") --> "pizza"
 
-function linearSearchIndexOf(arr, val) {}
+function linearSearchIndexOf(arr, val) {
 
-function linearSearchIncludes(arr, val) {}
+  for (let i = 0; i < arr.length; i++){
+    if (val === arr[i]) {
+      return i;
+    }
+    
+  }
 
-function linearSearchFind(arr, cb) {}
+  return -1;  
+
+}
+
+function linearSearchIncludes(arr, val) {
+for (let i = 0; i < arr.length; i++){
+    if (val === arr[i]) {
+      return true;
+    }
+    
+  }
+
+  return false;
+
+}
+
+function linearSearchFind(arr, cb) {
+
+  for (let i = 0; i < arr.length; i++){
+    if (val === arr[i]) {
+      return val;
+    }
+    
+  }
+
+  return undefined;
+
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

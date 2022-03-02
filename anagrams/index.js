@@ -28,8 +28,7 @@ function anagrams(stringA, stringB) {
     pairs[first_word[i]] = pairs[first_word[i]] + 1 || 1;
   }
   for (let i = 0; i < second_word.length; i++){
-    if (!pairs[second_word[i]]) {
-      return false;
+    w;
     }
     pairs[second_word[i]] = pairs[second_word[i]] - 1;
   }

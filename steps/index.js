@@ -1,4 +1,4 @@
-// Write a function that takes a number N.
+ // Write a function that takes a number N.
 // Over multiple lines it should console log a step shape
 // with N levels using the # character. Be sure to notice
 // how each step has some number of empty spaces to the right!
@@ -16,7 +16,22 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+for(let i=1;i<=n;i++){
+  
+  let level="";
+  
+  for(let j=i;j>0;j--){
+    level+="#"
+  }
+   for(let k=n-i;k>0;k--){
+    level+=" "
+  }
+ 
+  console.log(level);
+}
+
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

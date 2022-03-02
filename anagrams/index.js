@@ -8,7 +8,36 @@
 //   anagrams('Heart!', 'EARTH') --> True
 //   anagrams('lol', 'lolc') --> False
 
-function anagrams(stringA, stringB) {}
+function anagrams(stringA, stringB) {
+  let pairs = {};
+  // const first_word = stringA.toLowerCase().replace(/[\s^!]/g,"").split('').sort().join("");
+  // const second_word = stringB.toLowerCase().replace(/[\s^!]/g,"").split('').sort().join("");
+  const first_word = stringA.toLowerCase().replace(/[\s^!]/g,"");
+  const second_word = stringB.toLowerCase().replace(/[\s^!]/g,"");
+
+  // if (first_word === second_word) {
+  //   return true;
+  // }
+  // return false;
+
+  if (stringA.length != stringB.length) {
+    return false;
+  }
+
+  for (let i = 0; i < first_word.length; i++){
+    pairs[first_word[i]] = pairs[first_word[i]] + 1 || 1;
+  }
+  for (let i = 0; i < second_word.length; i++){
+    if (!pairs[second_word[i]]) {
+      return false;
+    }
+    pairs[second_word[i]] = pairs[second_word[i]] - 1;
+  }
+  return true;
+
+
+  
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
